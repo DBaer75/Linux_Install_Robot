@@ -22,30 +22,32 @@
         </visual>
     </link>
 
+
+
     <!-- Left Back Wheel -->
     <link name='left_back_wheel'>
-        <pose>-0.25 0.253 0.1 0 1.5707 1.5707</pose>
+        <pose>-0.245 0.253 0.1 0 1.5707 1.5707</pose>
         <collision name='lw_collision'>
             <geometry>
                 <cylinder>
-                    <radius>0.24</radius>
+                    <radius>0.244</radius>
                     <length>0.1</length>
                 </cylinder>
             </geometry>
             <friction>
                 <ode>
-                    <mu>100.0</mu>
-                    <mu2>0.1</mu2>
+                    <mu>1000.0</mu>
+                    <mu2>1000.0</mu2>
                     <fdir1>0 1 0</fdir1>
-                    <slip1>0.5</slip1>
-                    <slip2>100.0</slip2>
+                    <slip1>0.0</slip1>
+                    <slip2>0.0</slip2>
                 </ode>
             </friction>
         </collision>
         <visual name='lw_visual'>
             <geometry>
                 <cylinder>
-                    <radius>0.24</radius>
+                    <radius>0.244</radius>
                     <length>0.1</length>
                 </cylinder>
             </geometry>
@@ -54,29 +56,29 @@
 
     <!-- Left Front Wheel -->
     <link name='left_front_wheel'>
-        <pose>0.25 0.253 0.1 0 1.5707 1.5707</pose>
+        <pose>0.245 0.343 0.1 0 1.5707 1.5707</pose>
         <collision name='lw_collision'>
             <geometry>
                 <cylinder>
-                    <radius>0.24</radius>
-                    <length>0.1</length>
+                    <radius>0.244</radius>
+                    <length>0.28</length>
                 </cylinder>
             </geometry>
             <friction>
                 <ode>
-                    <mu>1.0</mu>
-                    <mu2>0.1</mu2>
+                    <mu>1000.0</mu>
+                    <mu2>1000.0</mu2>
                     <fdir1>0 1 0</fdir1>
-                    <slip1>0.5</slip1>
-                    <slip2>1.0</slip2>
+                    <slip1>0.0</slip1>
+                    <slip2>0.0</slip2>
                 </ode>
             </friction>
         </collision>
         <visual name='lw_visual'>
             <geometry>
                 <cylinder>
-                    <radius>0.24</radius>
-                    <length>0.1</length>
+                    <radius>0.244</radius>
+                    <length>0.28</length>
                 </cylinder>
             </geometry>
         </visual>
@@ -87,22 +89,22 @@
 
     <!-- Right Back Wheel -->
     <link name='right_back_wheel'>
-        <pose>-0.25 -0.253 0.1 0 1.5707 1.5707</pose>
+        <pose>-0.245 -0.253 0.1 0 1.5707 1.5707</pose>
         <collision name='lw_collision'>
             <geometry>
                 <cylinder>
-                    <radius>0.24</radius>
+                    <radius>0.244</radius>
                     <length>0.1</length>
                 </cylinder>
             </geometry>
             <surface>
             <friction>
                 <ode>
-                    <mu>100.0</mu>
-                    <mu2>0.1</mu2>
+                    <mu>1000.0</mu>
+                    <mu2>1000.0</mu2>
                     <fdir1>0 1 0</fdir1>
-                    <slip1>0.5</slip1>
-                    <slip2>100.0</slip2>
+                    <slip1>0.0</slip1>
+                    <slip2>0.0</slip2>
                 </ode>
             </friction>
             </surface>
@@ -110,7 +112,7 @@
         <visual name='lw_visual'>
             <geometry>
                 <cylinder>
-                    <radius>0.24</radius>
+                    <radius>0.244</radius>
                     <length>0.1</length>
                 </cylinder>
             </geometry>
@@ -119,22 +121,22 @@
 
     <!-- Right Front Wheel -->
     <link name='right_front_wheel'>
-        <pose>0.25 -0.253 0.1 0 1.5707 1.5707</pose>
+        <pose>0.245 -0.343 0.1 0 1.5707 1.5707</pose>
         <collision name='lw_collision'>
             <geometry>
                 <cylinder>
-                    <radius>0.24</radius>
-                    <length>0.1</length>
+                    <radius>0.244</radius>
+                    <length>0.28</length>
                 </cylinder>
             </geometry>
             <surface>
             <friction>
                 <ode>
-                    <mu>1.0</mu>
-                    <mu2>0.1</mu2>
+                    <mu>1000.0</mu>
+                    <mu2>1000.0</mu2>
                     <fdir1>0 1 0</fdir1>
-                    <slip1>0.5</slip1>
-                    <slip2>1.0</slip2>
+                    <slip1>0.0</slip1>
+                    <slip2>0.0</slip2>
                 </ode>
             </friction>
             </surface>
@@ -142,8 +144,8 @@
         <visual name='lw_visual'>
             <geometry>
                 <cylinder>
-                    <radius>0.24</radius>
-                    <length>0.1</length>
+                    <radius>0.244</radius>
+                    <length>0.28</length>
                 </cylinder>
             </geometry>
         </visual>
@@ -162,7 +164,7 @@
         </dynamics>
         <limit>
             <effort>200.0</effort>
-            <velocity>0.005</velocity>
+            <velocity>0.05</velocity>
         </limit>
     </joint>
 
@@ -179,7 +181,7 @@
         </dynamics>
         <limit>
             <effort>2.0</effort>
-            <velocity>0.005</velocity>
+            <velocity>0.05</velocity>
         </limit>
     </joint>
 
@@ -196,7 +198,7 @@
         </dynamics>
         <limit>
             <effort>200.0</effort>
-            <velocity>0.005</velocity>
+            <velocity>0.05</velocity>
         </limit>
     </joint>
 
@@ -213,7 +215,7 @@
         </dynamics>
         <limit>
             <effort>200.0</effort>
-            <velocity>0.005</velocity>
+            <velocity>0.05</velocity>
         </limit>
     </joint>
 

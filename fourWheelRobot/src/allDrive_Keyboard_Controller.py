@@ -8,8 +8,8 @@ import curses
 import time as t
 
 
-speedLimit = 5 #maximum speed of the robot
-effortStrength = 20 #range of [0,1]. Sets the strength of torque to wheels 
+speedLimit = 3 #maximum speed of the robot
+effortStrength = 50 #range of [0,1]. Sets the strength of torque to wheels 
 
 #set up joint ros
 msg_topic = '/gazebo/apply_joint_effort'
@@ -34,15 +34,19 @@ rate = rospy.Rate(f)
 
 
 def decideEffort(wheelFRate, wheelStatus):
-    #decides how much effort to apply to the wheels
-    #the dumbest controller possible, implementing a PI or PID controller would be way better
+    k = 5 #control constant
 
+    #decides how much effort to apply to the wheels
+    desired_rate = (speedLimit*wheelStatus)
+    error = desired_rate - wheelFRate
+
+    wheelEffort = k * error
     #fixed acceleration up to requested speed
-    if wheelFRate<(speedLimit*wheelStatus):
-        wheelEffort = effortStrength
+    #if wheelFRate<(speedLimit*wheelStatus):
+    #    wheelEffort = effortStrength
     #fixed decelleration down to requested speed
-    if wheelFRate > (speedLimit*wheelStatus):
-        wheelEffort = -effortStrength
+    #if wheelFRate > (speedLimit*wheelStatus):
+    #    wheelEffort = -effortStrength
     return wheelEffort
 
 
@@ -131,6 +135,7 @@ try:
             prevKey = currKey    
 
         #control the robot
+        #get rates
         valFrontLeft = pub_feedback(joint_left_front)
         valFrontRight = pub_feedback(joint_right_front)  
         valBackLeft = pub_feedback(joint_left_back)

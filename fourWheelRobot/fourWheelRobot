@@ -1,0 +1,101 @@
+#!/usr/bin/env bash
+INSTALL_DIR=/home/user/etc
+PROJECT_NAME=fourWheelRobot
+INSTALL_BIN=/home/user/bin
+BIN_NAME=fourWheelRobot
+export PATH="$PATH:$INSTALL_BIN"
+
+
+Install()
+{
+    #make folder for install
+    mkdir -p $INSTALL_DIR/$PROJECT_NAME
+    mkdir -p $INSTALL_BIN
+
+    #put bin into bin
+    cp $BIN_NAME $INSTALL_BIN/
+
+    #put all install files in etc
+    cp -r * $INSTALL_DIR/$PROJECT_NAME/
+
+    export PATH="$PATH:$INSTALL_BIN"
+    export PATH="$PATH:$INSTALL_DIR"
+}
+
+Uninstall()
+{
+    rm -r $INSTALL_DIR/$PROJECT_NAME
+    rm $INSTALL_BIN/$BIN_NAME
+}
+Start()
+{
+    cat "1" > /tmp/$PROJECT_NAME
+    cd $INSTALL_DIR/$PROJECT_NAME/final
+
+    echo 'loading level'
+    ./final.sh
+    cd ..
+
+    ./loadModel.sh
+    echo 'loading robot'
+    cd src
+
+    echo 'loading controller'
+    sleep 2
+    python allDrive_Keyboard_Controller.py
+
+    
+}
+
+
+Stop()
+{
+    ./rmRobot.sh
+    ./rmBoxes.sh
+    cat "0" > /tmp/$PROJECT_NAME
+}
+
+Status()
+{
+    echo $(cat /tmp$PROJECT_NAME)
+}
+
+Help()
+{
+    echo ' '
+    echo ' '
+    echo '-----------------------------------'
+    echo '--------------ddb-robot------------'
+    echo 'install       :install the program '
+    echo 'help          :run help            '
+    echo 'start         :starts robot drop   '
+    echo 'uninstall     :uninstalls          '
+    echo 'stop          :stops the program'
+    exit 0
+}
+
+
+case $1 in 
+'install')
+    Install
+    ;;
+'uninstall')
+    Uninstall
+    ;;
+'start')
+    Start
+    ;;
+'help')
+    Help
+    ;;
+'stop')
+    Stop
+    ;;
+'status')
+    Status
+    ;;
+*)
+    Help
+    ;;
+esac
+exit 0
