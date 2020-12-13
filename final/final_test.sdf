@@ -1,0 +1,153 @@
+<sdf version="1.4">
+<model name="dd_robot">
+    <pose>0 0 5.5 0 0 0</pose>
+   
+
+
+   <link name="link2">
+   <pose>10 0 0 0 0 0</pose>
+        <inertial>
+            <mass>1.0</mass>
+            <inertia>
+                <ixx>0.083</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.083</iyy>
+                <iyz>0</iyz>
+                <izz>0.083</izz>
+            </inertia>
+        </inertial>
+        <collision name="link_col">
+            <geometry>
+                <sphere> 
+                    <radius> 1  </radius> 
+                </sphere>
+            </geometry>
+        </collision>
+        <visual name="link_vis">
+            <geometry>
+                <sphere> 
+                    <radius> 1  </radius> 
+                </sphere>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+    </link>
+
+
+    <link name="link3">
+   <pose>10 -3 0 0 0 0</pose>
+        <inertial>
+            <mass>1.0</mass>
+            <inertia>
+                <ixx>0.083</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.083</iyy>
+                <iyz>0</iyz>
+                <izz>0.083</izz>
+            </inertia>
+        </inertial>
+        <collision name="link_col">
+            <geometry>
+                <sphere> 
+                    <radius> 1  </radius> 
+                </sphere>
+            </geometry>
+        </collision>
+        <visual name="link_vis">
+            <geometry>
+                <sphere> 
+                    <radius> 1  </radius> 
+                </sphere>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+    </link>
+
+
+
+    <link name="link4">
+   <pose>4 0 0 0 0 0</pose>
+        <inertial>
+            <mass>10.0</mass>
+            <inertia>
+                <ixx>0.083</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.083</iyy>
+                <iyz>0</iyz>
+                <izz>0.083</izz>
+            </inertia>
+        </inertial>
+        <collision name="link_col">
+            <geometry>
+                <sphere> 
+                    <radius> .5  </radius> 
+                </sphere>
+            </geometry>
+        </collision>
+        <visual name="link_vis">
+            <geometry>
+                <sphere> 
+                    <radius> .5  </radius> 
+                </sphere>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+    </link>
+
+
+
+     <link name="link6">
+   <pose>6 -.75 0 0 0 0</pose>
+        <inertial>
+            <mass>10.0</mass>
+            <inertia>
+                <ixx>0.083</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.083</iyy>
+                <iyz>0</iyz>
+                <izz>0.083</izz>
+            </inertia>
+        </inertial>
+        <collision name="link_col">
+            <geometry>
+                <sphere> 
+                    <radius> .5  </radius> 
+                </sphere>
+            </geometry>
+        </collision>
+        <visual name="link_vis">
+            <geometry>
+                <sphere> 
+                    <radius> .5  </radius> 
+                </sphere>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+        </visual>
+    </link>
+
+</model>
+</sdf>

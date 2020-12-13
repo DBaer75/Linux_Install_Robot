@@ -1,0 +1,225 @@
+<sdf version="1.4">
+<model name="dd_robot">
+    <static>true</static>
+    
+    <link name="link">
+        <pose> 0 0 0.5 0 0 0</pose>
+        <gravity>0</gravity> 
+
+
+        <visual name="link_vis">
+            
+            <geometry>
+                <box> 
+                    <size> 1 1 1 </size> 
+                </box>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+            <transparency>0.7</transparency>
+        </visual>
+    </link>
+
+
+
+    <link name="ramp_top">
+        <gravity>0</gravity> 
+        <pose> 10 0 1 0 0 0</pose>
+
+                <collision name="link_col">
+            <geometry>
+                <box> 
+                    <size> 2 2 2 </size> 
+                </box>
+            </geometry>
+        </collision>
+
+
+        <visual name="link_vis">
+            
+            <geometry>
+                <box> 
+                    <size> 2 2 2 </size> 
+                </box>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+            <transparency>0.9</transparency>
+        </visual>
+    </link>
+
+
+    <link name="ramp_ramp">
+        <gravity>0</gravity> 
+        <pose> 10 -6 1 0.2027100355 0 0</pose>
+
+                <collision name="link_col">
+            <geometry>
+                <box> 
+                    <size> 2 10.1980390272 0.1 </size>  
+                </box>
+            </geometry>
+        </collision>
+
+
+        <visual name="link_vis">
+            <geometry>
+                <box> 
+                    <size> 2 10.1980390272 0.1 </size> 
+                </box>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+            <transparency>0.9</transparency>
+        </visual>
+    </link>
+
+
+
+
+
+
+
+
+
+ <link name="ramp_top2">
+        <gravity>0</gravity> 
+        <pose> 8 0 1 0 0 0</pose>
+
+                <collision name="link_col">
+            <geometry>
+                <box> 
+                   <size> 1.1 1.1 2 </size> 
+                </box>
+            </geometry>
+        </collision>
+
+
+        <visual name="link_vis">
+            
+            <geometry>
+                <box> 
+                    <size> 1.1 1.1 2 </size> 
+                </box>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+            <transparency>0.9</transparency>
+        </visual>
+    </link>
+
+
+    <link name="ramp_top3">
+        <gravity>0</gravity> 
+        <pose> 6.5 0 1 0 0 0</pose>
+
+                <collision name="link_col">
+            <geometry>
+                <box> 
+                    <size> 1.2 1.2 2 </size> 
+                </box>
+            </geometry>
+        </collision>
+
+
+        <visual name="link_vis">
+            
+            <geometry>
+                <box> 
+                    <size> 1.2 1.2 2 </size> 
+                </box>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+            <transparency>0.9</transparency>
+        </visual>
+    </link>
+
+
+<link name="ramp_top4">
+        <gravity>0</gravity> 
+        <pose> 5 0 1 0 0 0</pose>
+
+                <collision name="link_col">
+            <geometry>
+                <box> 
+                    <size> 1.2 1.2 2 </size> 
+                </box>
+            </geometry>
+        </collision>
+
+
+        <visual name="link_vis">
+            
+            <geometry>
+                <box> 
+                    <size> 1.2 1.2 2 </size> 
+                </box>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+            <transparency>0.9</transparency>
+        </visual>
+    </link>
+
+<link name="ramp_top5">
+        <gravity>0</gravity> 
+        <pose> 2.68 0 0.875 0 -0.55684288947 0</pose>
+
+                <collision name="link_col">
+            <geometry>
+                <box> 
+                    <size> 4.10555127546 1.2 0.1 </size> 
+                </box>
+            </geometry>
+        </collision>
+
+
+        <visual name="link_vis">
+            
+            <geometry>
+                <box> 
+                    <size> 4.10555127546 1.2 0.1 </size> 
+                </box>
+            </geometry>
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>0.1 0.1 0.1 1</specular>
+                <emissive>0 0 0 0</emissive>
+            </material>
+            <transparency>0.9</transparency>
+        </visual>
+    </link>
+
+
+
+
+
+
+</model>
+</sdf>
