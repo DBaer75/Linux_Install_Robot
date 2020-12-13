@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 INSTALL_DIR=/home/user/etc
-PROJECT_NAME=fourWheelRobot
+PROJECT_NAME=baerDavid
 INSTALL_BIN=/home/user/bin
-BIN_NAME=fourWheelRobot
+BIN_NAME=baerDavid
 #export PATH="$PATH:$INSTALL_BIN"
 
 
@@ -79,7 +79,7 @@ Help()
 {
     echo ' '
     echo ' '
-    echo '-----------------------------------'
+    echo '--------------baerDavid------------'
     echo '-----------fourWheelRobot----------'
     echo 'install       :install the program '
     echo 'help          :run help            '

@@ -1,0 +1,1 @@
+rosservice call gazebo/delete_model final_setup
