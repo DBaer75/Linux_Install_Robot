@@ -38,8 +38,8 @@ Uninstall()
     PATH=${PATH//":$INSTALL_BIN:"/":"} # delete any instances in the middle
     PATH=${PATH/#"$INSTALL_BIN:"/} # delete any instance at the beginning
     PATH=${PATH/%":$INSTALL_BIN"/} # delete any instance in the at the end
-    source ~/.bashrc
-    echo $PATH
+    #source ~/.bashrc
+    #echo $PATH
 }
 Start()
 {
